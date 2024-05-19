@@ -14,6 +14,12 @@ TArray<FCategoryInfo> AYGPlayerState::GetStageInfoes() const
 	return StageInfoes;
 }
 
+void AYGPlayerState::AllStageInitialization()
+{
+	auto YGSaveGame = GetMutableDefault<UYGSaveGame>();
+	SetStageInfoes(YGSaveGame->StageInfoes);
+}
+
 void AYGPlayerState::InitStageInfoes()
 {
 	// 세이브 게임 객체 가져오기
@@ -68,7 +74,7 @@ void AYGPlayerState::SavePlayerData()
 	// 게임 슬롯에 저장
 	if (!UGameplayStatics::SaveGameToSlot(NewPlayerData, SaveSlotName, 0))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("SaveGame Error!"));
+		YANGGAENG_LOG(Warning, TEXT("SaveGame Error!"));
 	}
 }
 

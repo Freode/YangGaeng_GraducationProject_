@@ -23,6 +23,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "SaveGame")
 	TArray<FCategoryInfo> GetStageInfoes() const;
 
+	// 전체 초기화
+	UFUNCTION(BlueprintCallable, Category = "SaveGame")
+	void AllStageInitialization();
+
 	// 세이브 데이터로부터 스테이지 정보 초기화
 	UFUNCTION(BlueprintCallable, Category = "SaveGame")
 	void InitStageInfoes();

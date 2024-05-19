@@ -8,5 +8,4 @@ UYGSaveGame::UYGSaveGame()
 {
 	// 할당 및 초기화
 	StageInfoes.Init(FCategoryInfo(StageCount), CategoryCount);
-
 }
