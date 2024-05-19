@@ -10,15 +10,15 @@
  * 
  */
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FCategoryInfo
 {
 	GENERATED_BODY()
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CategoryInfo)
 	TArray<bool> bIsClearStages;
 	
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CategoryInfo)
 	TArray<int32> StageHighScores;
 
 	FCategoryInfo(){}
