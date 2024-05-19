@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "YangGaeng_DEP.h"
+#include "../YangGaeng_DEP.h"
 #include "GameFramework/SaveGame.h"
 #include "YGSaveGame.generated.h"
 
