@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GamePlay.h"
 #include "PlayerLevelCharacter.generated.h"
 
 UCLASS()
@@ -26,4 +27,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(VisibleAnywhere, Category = "UI")
+	UGamePlay* WG_GamePlay;
 };

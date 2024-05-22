@@ -4,7 +4,6 @@
 
 #include "../YangGaeng_DEP.h"
 #include "GameFramework/Actor.h"
-#include "InteractSequence.h"
 #include "PlayerLevelCharacter.h"
 #include "InteractBase.generated.h"
 
@@ -19,6 +18,8 @@ enum class EInteractKind : uint8
 	FIRE_ALARM,
 	FIRE_SWITCH
 };
+
+class InteractSequence;
 
 UCLASS()
 class YANGGAENG_DEP_API AInteractBase : public AActor
@@ -69,5 +70,5 @@ private:
 	EInteractKind InteractKind;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interact", meta = (AllowPrivateAccess = true))
-	AInteractSequence* InteractSequence;
+	AActor* InteractSequence;
 };

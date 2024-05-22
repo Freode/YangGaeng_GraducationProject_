@@ -2,6 +2,7 @@
 
 
 #include "InteractBase.h"
+#include "InteractSequence.h"
 
 // Sets default values
 AInteractBase::AInteractBase()
@@ -50,9 +51,10 @@ void AInteractBase::EndEvent()
 {
 	SetHighlight(false);
 	Box->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	if (InteractSequence)
+	AInteractSequence* InterSeq = Cast<AInteractSequence>(InteractSequence);
+	if (InterSeq)
 	{
-		InteractSequence->NextInteractEvent();
+		InterSeq->NextInteractEvent();
 	}
 }
 
