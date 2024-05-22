@@ -2,6 +2,8 @@
 
 
 #include "InteractSequence.h"
+#include "PlayerLevelCharacter.h"
+#include "TimerManager.h"
 
 // Sets default values
 AInteractSequence::AInteractSequence()
@@ -16,6 +18,11 @@ void AInteractSequence::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AInteractSequence::DelayComplete, 0.2f, false);
+	if (Interacts.Num() > 0)
+	{
+		Interacts[0]->HighlightEvent();
+	}
 }
 
 // Called every frame
@@ -27,5 +34,29 @@ void AInteractSequence::Tick(float DeltaTime)
 
 void AInteractSequence::NextInteractEvent()
 {
+	Sequence++;
+	if (Interacts.Num() == Sequence)
+	{
+		UWorld* World = GetWorld();
+		if (!World) { return; }
+		APlayerController* PlayerController = World->GetFirstPlayerController();
+		
+		if (!PlayerController) { return; }
+		APlayerLevelCharacter* PlayerCharacter = Cast<APlayerLevelCharacter>(PlayerController->GetPawn());
 
+		if (!PlayerCharacter) { return; }
+		PlayerCharacter->WG_GamePlay->GameEnd(true);
+	}
+	else
+	{
+		for (AInteractBase* each : Interacts)
+		{
+			each->HighlightEvent();
+		}
+	}
+}
+
+void AInteractSequence::DelayComplete()
+{
+	YANGGAENG_LOG(Warning, TEXT("Delay Complete."));
 }
