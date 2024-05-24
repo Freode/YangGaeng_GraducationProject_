@@ -3,6 +3,7 @@
 
 #include "Fire.h"
 #include "DamageInterface.h"
+#include "ExtinguisherSmoke.h"
 
 // Sets default values
 AFire::AFire()
@@ -19,6 +20,7 @@ AFire::AFire()
 	}
 
 	bCanApplyDamage = true;
+	LifeCount = 10;
 
 }
 
@@ -58,6 +60,7 @@ void AFire::Tick(float DeltaTime)
 
 void AFire::OnSmokeBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+
 }
 
 // 화상 데미지
@@ -71,9 +74,25 @@ void AFire::OnHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActo
 	}
 }
 
+// 화재 진압
 void AFire::OnSphereBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	AExtinguisherSmoke* ExtinguisherSmoke = Cast<AExtinguisherSmoke>(OtherActor);
+	if (ExtinguisherSmoke)
+	{
+		LifeCount--;
 
+		if (LifeCount <= 0)
+		{
+			Sphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			Fx->Deactivate();
+			SmokeBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			HitBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			AInteractBase::EndEvent();
+			GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AFire::EmptyFunction, 6.0f, false);
+			Destroy();
+		}
+	}
 }
 
 // 화상 데미지 1초에 1번씩만 전달
@@ -98,4 +117,9 @@ void AFire::HandleTimelineFinished()
 	{
 		DamageTimeline->PlayFromStart();
 	}
+}
+
+void AFire::EmptyFunction() const
+{
+
 }

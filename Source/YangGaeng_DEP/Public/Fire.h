@@ -4,11 +4,12 @@
 
 #include "../YangGaeng_DEP.h"
 #include "GameFramework/Actor.h"
+#include "InteractBase.h"
 #include "Components/TimelineComponent.h"
 #include "Fire.generated.h"
 
 UCLASS()
-class YANGGAENG_DEP_API AFire : public AActor
+class YANGGAENG_DEP_API AFire : public AInteractBase
 {
 	GENERATED_BODY()
 	
@@ -51,10 +52,14 @@ public:
 	USphereComponent* Sphere;
 
 	UPROPERTY(VisibleAnywhere, Category = "Fire")
-	UParticleSystemComponent* fx;
+	UParticleSystemComponent* Fx;
 	
 	UPROPERTY(VisibleAnywhere, Category = "Fire")
 	UParticleSystemComponent* P_Smoke;
+
+private:
+
+	void EmptyFunction() const;
 
 private:
 
@@ -73,4 +78,5 @@ private:
 	AActor* PlayerActor;
 	UPrimitiveComponent* PlayerComp;
 	bool bCanApplyDamage = true;
+	FTimerHandle TimerHandle;
 };
