@@ -4,6 +4,7 @@
 
 #include "../YangGaeng_DEP.h"
 #include "GameFramework/Actor.h"
+#include "Components/TimelineComponent.h"
 #include "Fire.generated.h"
 
 UCLASS()
@@ -32,6 +33,12 @@ public:
 	UFUNCTION()
 	void OnSphereBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
+	UFUNCTION()
+	void HandleProgress(float value);
+
+	UFUNCTION()
+	void HandleTimelineFinished();
+
 public:
 
 	UPROPERTY(VisibleAnywhere, Category = "Fire")
@@ -56,4 +63,14 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Fire", Meta = (AllowPrivateAccess = true))
 	bool bSmokeMode;
+
+	UPROPERTY()
+	UTimelineComponent* DamageTimeline;
+
+	UPROPERTY()
+	UCurveFloat* MyCurve;
+
+	AActor* PlayerActor;
+	UPrimitiveComponent* PlayerComp;
+	bool bCanApplyDamage = true;
 };

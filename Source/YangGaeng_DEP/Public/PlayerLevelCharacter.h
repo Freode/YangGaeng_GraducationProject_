@@ -5,10 +5,11 @@
 #include "../YangGaeng_DEP.h"
 #include "GameFramework/Character.h"
 #include "GamePlay.h"
+#include "DamageInterface.h"
 #include "PlayerLevelCharacter.generated.h"
 
 UCLASS()
-class YANGGAENG_DEP_API APlayerLevelCharacter : public ACharacter
+class YANGGAENG_DEP_API APlayerLevelCharacter : public ACharacter, public IDamageInterface 
 {
 	GENERATED_BODY()
 
@@ -26,6 +27,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void ApplyDamage(AActor* InteractObject) override;
 
 	UPROPERTY(VisibleAnywhere, Category = "UI")
 	UGamePlay* WG_GamePlay;
