@@ -43,10 +43,10 @@ public:
 	virtual void InteractEvent_Implementation(APlayerLevelCharacter* Character, bool bIsUI_Expression);
 
 	UFUNCTION(BlueprintCallable, Category = "Interact")
-	void HighlightEvent();
+	virtual void HighlightEvent();
 
 	UFUNCTION(BlueprintCallable, Category = "Interact")
-	void EndEvent();
+	virtual void EndEvent();
 
 	UFUNCTION(BlueprintCallable, Category = "Interact")
 	void SetHighlight(bool bIsHighlight);
@@ -59,7 +59,7 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = "Interact")
 	UBoxComponent* Box;
 
-private:
+protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interact", meta = (AllowPrivateAccess = true))
 	TArray<UStaticMeshComponent*> HighlightMeshes; 
 
