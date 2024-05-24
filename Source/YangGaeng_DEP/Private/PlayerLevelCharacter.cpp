@@ -32,3 +32,8 @@ void APlayerLevelCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 
 }
 
+void APlayerLevelCharacter::ApplyDamage(AActor* InteractObject)
+{
+
+}
+
