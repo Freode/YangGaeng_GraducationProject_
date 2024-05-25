@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "../YangGaeng_DEP.h"
 #include "Animation/AnimInstance.h"
 #include "PlayLevelAnimInstance.generated.h"
 

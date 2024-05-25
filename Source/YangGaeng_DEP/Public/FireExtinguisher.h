@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "../YangGaeng_DEP.h"
 #include "InteractBase.h"
 #include "Components/ArrowComponent.h"
 #include "FireExtinguisher.generated.h"
