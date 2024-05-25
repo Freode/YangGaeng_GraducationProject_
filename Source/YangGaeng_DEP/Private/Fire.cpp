@@ -89,7 +89,9 @@ void AFire::OnSphereBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AA
 			SmokeBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			HitBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			AInteractBase::EndEvent();
-			GetWorld()->GetTimerManager().SetTimer(TimerHandle, this, &AFire::EmptyFunction, 6.0f, false);
+			GetWorld()->GetTimerManager().
+				SetTimer(TimerHandle, this, &AFire::EmptyFunction, 
+					6.0f, false);
 			Destroy();
 		}
 	}
