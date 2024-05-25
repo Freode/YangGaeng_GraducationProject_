@@ -4,6 +4,7 @@
 #include "FireExtinguisher.h"
 #include "Engine/World.h"
 #include "ExtinguisherSmoke.h"
+#include "PlayLevelAnimInstance.h"
 
 AFireExtinguisher::AFireExtinguisher()
 {
@@ -68,6 +69,22 @@ void AFireExtinguisher::EndEvent()
 void AFireExtinguisher::InteractEvent_Implementation(APlayerLevelCharacter* Character, bool bIsUI_Expression)
 {
 	Super::InteractEvent_Implementation(Character, bIsUI_Expression);
+
+	if (bCanOperate)
+	{
+		bCanOperate = false;
+		InteractCharacter = Character;
+
+		UPlayLevelAnimInstance* Anim = Cast<UPlayLevelAnimInstance>
+			(InteractCharacter->GetMesh()->GetAnimInstance());
+		if (Anim == nullptr) { return; }
+
+		Anim->SetHasFireExtinguisher(true);
+		AttachToComponent(InteractCharacter->GetMesh(), 
+			FAttachmentTransformRules::SnapToTargetNotIncludingScale, 
+			FName(TEXT("FireExtinguisher_Socket")));
+		SetMode(true);
+	}
 }
 
 void AFireExtinguisher::SetMode(bool bIsPickup)
