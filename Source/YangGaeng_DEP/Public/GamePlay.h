@@ -84,4 +84,5 @@ private:
 
 	class UTexture2D* HeartFullTexture;
 	class UTexture2D* HeartEmptyTexture;
+
 };
