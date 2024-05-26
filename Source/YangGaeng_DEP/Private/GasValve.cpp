@@ -16,10 +16,9 @@ AGasValve::AGasValve()
 
 void AGasValve::InteractEvent_Implementation(APlayerLevelCharacter* Character, bool bIsUI_Expression)
 {
-	Super::InteractEvent_Implementation(Character, bIsUI_Expression);
-
 	if (bCanOperate)
 	{
+		Super::InteractEvent_Implementation(Character, bIsUI_Expression);
 		bCanOperate = false;
 		ValveRockTimeline->PlayFromStart();
 	}

@@ -20,3 +20,15 @@ void AFireAlarm::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
+
+void AFireAlarm::InteractEvent_Implementation(APlayerLevelCharacter* Character, bool bIsUI_Expression)
+{
+	if (bCanOperate)
+	{
+		Super::InteractEvent_Implementation(Character, bIsUI_Expression);
+		bCanOperate = false;
+
+		EndEvent();
+		AlarmAudio->Play();
+	}
+}
