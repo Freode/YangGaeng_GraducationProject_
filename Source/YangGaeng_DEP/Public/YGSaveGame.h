@@ -45,5 +45,5 @@ public:
 private:
 
 	int32 CategoryCount = 5;
-	int32 StageCount = 5;
+	int32 StageCount = 8;
 };
