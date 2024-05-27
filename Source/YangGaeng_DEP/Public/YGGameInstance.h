@@ -4,29 +4,11 @@
 
 #include "../YangGaeng_DEP.h"
 #include "Engine/GameInstance.h"
-#include "Engine/DataTable.h"
 #include "YGGameInstance.generated.h"
 
 /**
  * 
  */
-
-USTRUCT(BlueprintType)
-struct FInteractContext : public FTableRowBase
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FText Title;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FText Context;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UTexture2D* Image;
-
-};
-
 UCLASS()
 class YANGGAENG_DEP_API UYGGameInstance : public UGameInstance
 {
