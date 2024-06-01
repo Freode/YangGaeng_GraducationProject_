@@ -60,6 +60,7 @@ void ADescendingLifeLine::ScaleHandleTimelineFinished()
 
 void ADescendingLifeLine::CapsuleMoveComponent()
 {
+	// 완강기에 있는 캐릭터 가져오기
 	TArray<AActor*> OverlappingActors;
 	Box->GetOverlappingActors(OverlappingActors, APlayerLevelCharacter::StaticClass());
 
@@ -67,20 +68,20 @@ void ADescendingLifeLine::CapsuleMoveComponent()
 	{
 		APlayerLevelCharacter* PC = Cast<APlayerLevelCharacter>(OverlappingActors[0]);
 		PC->GetCapsuleComponent()->GetComponentLocation();
-
+		// 목표 위치 설정
 		FVector NewLocation = PC->GetCapsuleComponent()->GetComponentLocation();
 		NewLocation.Z = SM_Rope->GetComponentLocation().Z;
 		FRotator NewRotation = FRotator::ZeroRotator;
-
+		// 타임라인 델리게이트에 함수 바인딩
 		FTimerDelegate TimerDel;
 		TimerDel.BindUFunction(this, FName("CapsuleMoveComponent"));
-
+		// Move Component 실행 준비
 		FLatentActionInfo LatentInfo;
 		LatentInfo.CallbackTarget = this;
 		LatentInfo.ExecutionFunction = "OnCapsuleMoveComponentComplete";
 		LatentInfo.Linkage = 0;
 		LatentInfo.UUID = __COUNTER__;
-
+		// 캐릭터를 완강기 줄을 따라 최하단으로 이동하도록 구현
 		UKismetSystemLibrary::MoveComponentTo(PC->GetCapsuleComponent(), NewLocation, NewRotation, false, false, 5.0f, false, EMoveComponentAction::Type::Move, LatentInfo);
 	}
 }

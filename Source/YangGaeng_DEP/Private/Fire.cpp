@@ -77,18 +77,22 @@ void AFire::OnHitBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActo
 // 화재 진압
 void AFire::OnSphereBoxOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	// 화재와 닿은 객체의 클래스가 화재약제일 때
 	AExtinguisherSmoke* ExtinguisherSmoke = Cast<AExtinguisherSmoke>(OtherActor);
 	if (ExtinguisherSmoke)
 	{
+		// 화재의 체력 수 감소
 		LifeCount--;
-
+		// 화재의 체력이 0 이하일 때
 		if (LifeCount <= 0)
 		{
+			// 접촉 비활성과 함께 화재 파티클 비활성화
 			Sphere->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			Fx->Deactivate();
 			SmokeBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			HitBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 			AInteractBase::EndEvent();
+			// 6초 후에 화재 객체 제거
 			GetWorld()->GetTimerManager().
 				SetTimer(TimerHandle, this, &AFire::EmptyFunction, 
 					6.0f, false);

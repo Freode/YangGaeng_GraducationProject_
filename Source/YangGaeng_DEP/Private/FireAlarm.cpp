@@ -23,12 +23,14 @@ void AFireAlarm::Tick(float DeltaTime)
 
 void AFireAlarm::InteractEvent_Implementation(APlayerLevelCharacter* Character, bool bIsUI_Expression)
 {
+	// 현재 시나리오일 때
 	if (bCanOperate)
 	{
 		Super::InteractEvent_Implementation(Character, bIsUI_Expression);
 		bCanOperate = false;
 
 		EndEvent();
+		// 화재 경보음 활성화
 		AlarmAudio->Play();
 	}
 }

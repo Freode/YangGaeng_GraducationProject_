@@ -39,22 +39,26 @@ void AElectricSwitch::Tick(float DeltaTime)
 	SwitchTimelines->TickComponent(DeltaTime, ELevelTick::LEVELTICK_TimeOnly, nullptr);
 }
 
+// 상호작용 함수
 void AElectricSwitch::InteractEvent_Implementation(APlayerLevelCharacter* Character, bool bIsUI_Expression)
 {
+	// 현재 시나리오 상태일 때
 	if (bCanOperate)
 	{
 		bCanOperate = false;
 		InteractEvent_Implementation(Character, bIsUI_Expression);
-
+		// 스위치 작동
 		SwitchTimelines->PlayFromStart();
 	}
 }
 
+// 타임라인 작동 함수
 void AElectricSwitch::HandleProgress(float Value)
 {
 	SetActorRotation(FRotator(Value * 120.0f, 0.0f, 90.0f));
 }
 
+// 타임라인 종료 함수
 void AElectricSwitch::HandleTimelineFinished()
 {
 	EndEvent();
