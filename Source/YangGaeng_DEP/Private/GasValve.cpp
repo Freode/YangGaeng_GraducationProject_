@@ -48,14 +48,17 @@ void AGasValve::BeginPlay()
 
 	if (MyCurve)
 	{
+		// 타임라인 진행 함수 설정
 		FOnTimelineFloat ProgressFunction;
 		ProgressFunction.BindUFunction(this, FName("HandleProgress"));
 		ValveRockTimeline->AddInterpFloat(MyCurve, ProgressFunction);
 
+		// 타임라인 종료 함수 설정
 		FOnTimelineEvent TimelineFinishedFunction;
 		TimelineFinishedFunction.BindUFunction(this, FName("HandleTimelineFinished"));;
 		ValveRockTimeline->SetTimelineFinishedFunc(TimelineFinishedFunction);
 
+		// 타임라인 반복 비활성화
 		ValveRockTimeline->SetLooping(false);
 	}
 }

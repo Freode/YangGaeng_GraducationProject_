@@ -34,17 +34,22 @@ private:
 
 private:
 
+	// 현재 순서
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sequence", Meta = (AllowPrivateAccess = true))
 	int32 Sequence;
 
+	// 상호작용 순서 정하기
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sequence", Meta = (AllowPrivateAccess = true))
 	TArray<AInteractBase*> Interacts;
 
+	// 스테이지 진입 시, 바로 준비해야하는 상호작용
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sequence", Meta = (AllowPrivateAccess = true))
 	TArray<AInteractBase*> PrepareActors;
 
+	// UI 출력할 상호작용 도구 번호
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sequence", Meta = (AllowPrivateAccess = true))
 	int32 UI_ExplanationIdx;
 
+	// 타이머 핸들러
 	FTimerHandle TimerHandle;
 };

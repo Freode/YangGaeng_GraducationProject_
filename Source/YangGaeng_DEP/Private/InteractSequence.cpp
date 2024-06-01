@@ -35,6 +35,7 @@ void AInteractSequence::Tick(float DeltaTime)
 void AInteractSequence::NextInteractEvent()
 {
 	Sequence++;
+	// 시나리오를 완료
 	if (Interacts.Num() == Sequence)
 	{
 		UWorld* World = GetWorld();
@@ -44,9 +45,11 @@ void AInteractSequence::NextInteractEvent()
 		if (!PlayerController) { return; }
 		APlayerLevelCharacter* PlayerCharacter = Cast<APlayerLevelCharacter>(PlayerController->GetPawn());
 
+		// 게임 종료 호출
 		if (!PlayerCharacter) { return; }
 		PlayerCharacter->WG_GamePlay->GameEnd(true);
 	}
+	// 시나리오 진행 중
 	else
 	{
 		for (AInteractBase* each : Interacts)

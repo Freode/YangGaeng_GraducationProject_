@@ -26,6 +26,7 @@ void AElevator::Tick(float DeltaTime)
 
 void AElevator::HandleProgress(float value)
 {
+	// 엘레베이터 문 닫힘
 	SM_Door_Right->AddRelativeLocation(FVector(-4.5f * value, 0.0f, 0.0f));
 	SM_Door_Left->AddRelativeLocation(FVector(4.5f * value, 0.0f, 0.0f));
 }
@@ -84,10 +85,12 @@ void AElevator::BeginPlay()
 
 	if (MyCurve)
 	{
+		// 엘리베이터 타임라인 진행 함수
 		FOnTimelineFloat ProgressFunction;
 		ProgressFunction.BindUFunction(this, FName("HandleProgress"));
 		DoorTimeline->AddInterpFloat(MyCurve, ProgressFunction);
 
+		// 엘리베이터 타임라인 완료 함수
 		FOnTimelineEvent OnCompleteFunction;
 		OnCompleteFunction.BindUFunction(this, FName("HandleTimelineFinished"));
 		DoorTimeline->SetTimelineFinishedFunc(OnCompleteFunction);
