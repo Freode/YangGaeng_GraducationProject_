@@ -32,4 +32,15 @@ public:
 
 	UPROPERTY(VisibleAnywhere, Category = "UI")
 	UGamePlay* WG_GamePlay;
+
+private:
+
+	void Movement(float NewAxisValue);
+	void InteractOfE();
+	void ConfigurationPrint();
+	void SitDown();
+	void SitUp();
+	void FireExtinguisherOn();
+	void FireExtinguisherOff();
+
 };
