@@ -29,6 +29,16 @@ void APlayerLevelCharacter::Tick(float DeltaTime)
 void APlayerLevelCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	// 움직임 함수 바인딩
+	PlayerInputComponent->BindAxis(TEXT("Movement"), this, &APlayerLevelCharacter::Movement);
+	// 환경 설정 출력 바인딩
+	PlayerInputComponent->BindAction(TEXT("ConfigurationPrint"), EInputEvent::IE_Pressed, this, &APlayerLevelCharacter::ConfigurationPrint);
+	// 앉기 함수 바인딩
+	PlayerInputComponent->BindAction(TEXT("Sit"), EInputEvent::IE_Pressed, this, &APlayerLevelCharacter::SitDown);
+	PlayerInputComponent->BindAction(TEXT("Sit"), EInputEvent::IE_Released, this, &APlayerLevelCharacter::SitUp);
+	// 소화약제 분사 함수 바인딩
+	PlayerInputComponent->BindAction(TEXT("FireExtinguisher"), EInputEvent::IE_Pressed, this, &APlayerLevelCharacter::FireExtinguisherOn);
+	PlayerInputComponent->BindAction(TEXT("FireExtinguisher"), EInputEvent::IE_Released, this, &APlayerLevelCharacter::FireExtinguisherOff);
 
 }
 
@@ -37,3 +47,30 @@ void APlayerLevelCharacter::ApplyDamage(AActor* InteractObject)
 
 }
 
+void APlayerLevelCharacter::Movement(float NewAxisValue)
+{
+}
+
+void APlayerLevelCharacter::InteractOfE()
+{
+}
+
+void APlayerLevelCharacter::ConfigurationPrint()
+{
+}
+
+void APlayerLevelCharacter::SitDown()
+{
+}
+
+void APlayerLevelCharacter::SitUp()
+{
+}
+
+void APlayerLevelCharacter::FireExtinguisherOn()
+{
+}
+
+void APlayerLevelCharacter::FireExtinguisherOff()
+{
+}
