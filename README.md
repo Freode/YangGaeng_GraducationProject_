@@ -95,7 +95,7 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 현재 본인 파트는 개발을 완료했으며, 나머지 팀원들의 파트를 보조 및 피드백을 통해 총괄하고 있습니다.
 
 
-### USavaGame 클래스를 이용한 플레이어 정보 저장
+### USavaSlot 클래스를 이용한 플레이어 정보 저장
 - 
 
 
@@ -112,7 +112,7 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 
 ## 시연 영상
-[![시연 영상](https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/K_YangGaneg_Title_Image.png)](https://youtu.be/f4ixF1Mcdbc)
+[![시연 영상](https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/K_YangGaneg_Title_Image.png)](https://youtu.be/kSwMCccAWC8)
 - 클릭하시면, 시연 영상으로 이동합니다.
 
 
