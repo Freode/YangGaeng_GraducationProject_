@@ -18,7 +18,7 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 - 최정호(본인) : 팀장 - 
 - 김연경 : 팀원 - 총기
 
-- 비중 : FE(60%), 기획(60%)
+- 비중 : FE(65%), 기획(60%)
 
 ---
 
@@ -84,14 +84,11 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 
 ### 메인 & 스테이지 화면 세부 플로우차트
-<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_3.png?raw=true" alt="YangGaeng_FlowChart_3">
-
-
-![플로우 차트](https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/ReadMe_Image_1.png)
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_6.png?raw=true" alt="YangGaeng_FlowChart_6">
 
 
 ## 본인 역할
-![본인 역할](https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/K_YangGaeng_DevelopmentPart.png)
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_5.png?raw=true" alt="YangGaeng_FlowChart_5">
 
 
 캐릭터 이동, 파쿠르, 대쉬 스킬 등의 캐릭터 파트와 캐릭터 애니메이션 블루프린트에 총기를 사용할 수 있도록 Aim Offset을 추가하는 파트까지 담당했습니다.
