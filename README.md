@@ -96,19 +96,50 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 
 ### USavaSlot 클래스를 이용한 플레이어 정보 저장
-- 
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FrameworkWithSaveSlot.gif?raw=true" alt="YangGaeng_FrameworkWithSaveSlot" width="600">
 
 
 ### 시나리오 담당 클래스
 
 
 ### 상호작용 클래스 모듈화
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_InteractionHighlighting.gif?raw=true" alt="YangGaeng_InteractionHighlighting" width="600">
 
 
 ### 소화기 애니메이션 및 상호작용 기능 개발
-
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FireExtinguisher_1.gif?raw=true" alt="YangGaeng_FireExtinguisher_1" width="600">
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FireExtinguisher_2.gif?raw=true" alt="YangGaeng_FireExtinguisher_2" width="600">
+      </figure>
+    </td>
+  </tr>
+</table>
+  
 
 ### Widget을 사용한 게임적 요소 추가
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_StageClearAndScore.gif?raw=true" alt="YangGaeng_StageClearAndScore" width="600">
+        <figcaption>타이머와 체력 기반으로 점수 측정</figcaption>
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_HealthReduce_1.gif?raw=true" alt="YangGaeng_HealthReduce_1" width="600">
+        <figcaption>화재 연기로 인한 체력 감소</figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
 
 
 ## 시연 영상
