@@ -111,12 +111,12 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
   <tr>
     <td style="text-align: center;">
       <figure>
-        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FireExtinguisher_1.gif?raw=true" alt="YangGaeng_FireExtinguisher_1" width="600">
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FireExtinguisher_1.gif?raw=true" alt="YangGaeng_FireExtinguisher_1" width="500">
       </figure>
     </td>
     <td>
       <figure>
-        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FireExtinguisher_2.gif?raw=true" alt="YangGaeng_FireExtinguisher_2" width="600">
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FireExtinguisher_2.gif?raw=true" alt="YangGaeng_FireExtinguisher_2" width="500">
       </figure>
     </td>
   </tr>
@@ -128,13 +128,13 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
   <tr>
     <td style="text-align: center;">
       <figure>
-        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_StageClearAndScore.gif?raw=true" alt="YangGaeng_StageClearAndScore" width="600">
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_StageClearAndScore.gif?raw=true" alt="YangGaeng_StageClearAndScore" width="500">
         <figcaption>타이머와 체력 기반으로 점수 측정</figcaption>
       </figure>
     </td>
     <td>
       <figure>
-        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_HealthReduce_1.gif?raw=true" alt="YangGaeng_HealthReduce_1" width="600">
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_HealthReduce_1.gif?raw=true" alt="YangGaeng_HealthReduce_1" width="500">
         <figcaption>화재 연기로 인한 체력 감소</figcaption>
       </figure>
     </td>
