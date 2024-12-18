@@ -2,7 +2,7 @@
 Graduation Project - 화재상황대처 기능성 게임 콘텐츠
 
 
-<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaneg_Title.png?raw=true" alt="Image 9" width="500">
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_Title.png?raw=true" alt="YangGaeng_Title.png" width="500">
 
 
 ## 요약
