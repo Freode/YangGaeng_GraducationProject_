@@ -2,7 +2,7 @@
 Graduation Project - 화재상황대처 기능성 게임 콘텐츠
 
 
-<img src = "https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/K_YangGaneg_Title_Image.png?raw=true" alt="Image 9" width="500">
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaneg_Title.png?raw=true" alt="Image 9" width="500">
 
 
 ## 요약
@@ -96,10 +96,37 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 
 ### USavaSlot 클래스를 이용한 플레이어 정보 저장
-<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FrameworkWithSaveSlot.gif?raw=true" alt="YangGaeng_FrameworkWithSaveSlot" width="600">
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_IntroductionImage_3.png?raw=true" alt="YangGaeng_IntroductionImage_1" width="500">
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FrameworkWithSaveSlot.gif?raw=true" alt="YangGaeng_FrameworkWithSaveSlot" width="500">
+      </figure>
+    </td>
+  </tr>
+</table>
 
 
 ### 시나리오 담당 클래스
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_IntroductionImage_3.png?raw=true" alt="YangGaeng_IntroductionImage_3" width="500">
+      </figure>
+    </td>
+    <td>
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_IntroductionImage_4.png?raw=true" alt="YangGaeng_IntroductionImage_4" width="500">
+      </figure>
+    </td>
+  </tr>
+</table>
 
 
 ### 상호작용 클래스 모듈화
@@ -108,6 +135,14 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 ### 소화기 애니메이션 및 상호작용 기능 개발
 <table>
+  <tr>
+    <td>
+      <figure>
+        <img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_IntroductionImage_5.png?raw=true" alt="YangGaeng_IntroductionImage_5" width="500">
+        <figcaption>소화기 애니메이션 제작 및 소켓 활용</figcaption>
+      </figure>
+    </td>
+  </tr>
   <tr>
     <td style="text-align: center;">
       <figure>
@@ -121,7 +156,9 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
     </td>
   </tr>
 </table>
-  
+
+
+
 
 ### Widget을 사용한 게임적 요소 추가
 <table>
@@ -143,7 +180,7 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 
 ## 시연 영상
-[![시연 영상](https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/K_YangGaneg_Title_Image.png)](https://youtu.be/kSwMCccAWC8)
+[![시연 영상](https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaneg_Title.png)](https://youtu.be/kSwMCccAWC8)
 - 클릭하시면, 시연 영상으로 이동합니다.
 
 
