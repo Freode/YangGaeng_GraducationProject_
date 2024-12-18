@@ -76,15 +76,15 @@ Unreal Engine 5을 기반으로 시나리오별 화재 상황에 대한 대처�
 
 
 ### 시나리오
-<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_1.png?raw=true" alt="YangGaeng_FlowChart_1" width="500">
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_1.png?raw=true" alt="YangGaeng_FlowChart_1">
 
 
 ### 프레임워크
-<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_2.png?raw=true" alt="YangGaeng_FlowChart_2" width="500">
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_2.png?raw=true" alt="YangGaeng_FlowChart_2">
 
 
 ### 메인 & 스테이지 화면 세부 플로우차트
-<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_3.png?raw=true" alt="YangGaeng_FlowChart_3" width="500">
+<img src = "https://github.com/Freode/YangGaeng_GraducationProject_Final/blob/main/ReadMeImage/YangGaeng_FlowChart_3.png?raw=true" alt="YangGaeng_FlowChart_3">
 
 
 ![플로우 차트](https://github.com/Freode/K_YangGaeng/blob/main/ReadMeImage/ReadMe_Image_1.png)
